@@ -10,7 +10,9 @@ Taehoon Ha
 
 ### Question 1
 
-Write a function that generates numbers from *B**i**n**o**m**i**a**l*(*n*, *p*) distribution using `runif()` function. + Hint: *B**i**n**o**m**i**a**l*(*n*, *p*) random variable can be defined as a sum of n independent *B**e**r**n**o**u**l**l**i*(*p*) random variables.
+Write a function that generates numbers from *B**i**n**o**m**i**a**l*(*n*, *p*) distribution using `runif()` function. 
+
++ Hint: *B**i**n**o**m**i**a**l*(*n*, *p*) random variable can be defined as a sum of n independent *B**e**r**n**o**u**l**l**i*(*p*) random variables.
 
 ``` r
 q1 <- function(n, p) {
