@@ -30,12 +30,12 @@ Suppose we want to simulate data from a linear regression model:
 </p>
 <br>
 
-Let $\beta_0$=15 and $\beta_1=0.4$ are known coefficients. Generate data ($N=50$) from this models with given coefficients. Fit a linear regression model and plot fitted values vs. residuals using `ggplot()` function. Please do not forget to use `set.seed()` function for reproductibility.
+Let beta_0=15 and \beta_1=0.4 are known coefficients. Generate data (N=50) from this models with given coefficients. Fit a linear regression model and plot fitted values vs. residuals using `ggplot()` function. Please do not forget to use `set.seed()` function for reproductibility.
 
 <br>
 
 #### Question 4
-Box-Muller algorithm: generate $U_1$ and $U_2$ two independent uniform (0, 1) random variables and set:
+Box-Muller algorithm: generate U_1 and U_2 two independent uniform (0, 1) random variables and set:
 
 <p align="center">
 <img src = 'https://ws1.sinaimg.cn/large/006tNbRwly1fxgqt6hpblj309i042t8q.jpg'>
