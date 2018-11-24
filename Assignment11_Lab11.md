@@ -3,19 +3,19 @@ Assignment Eleven - Biostatistics1
 Taehoon Ha
 11/23/2018
 
--   [1 Create a GitHub repository Lab11](#create-a-github-repository-lab11)
--   [2 Submit your code for all problems from **Activity11**.](#submit-your-code-for-all-problems-from-activity11.)
+-   [1. Create a GitHub repository Lab11](#create-a-github-repository-lab11)
+-   [2. Submit your code for all problems from **Activity11**.](#submit-your-code-for-all-problems-from-activity11.)
     -   [Question 1](#question-1)
     -   [Question 2](#question-2)
     -   [Question 3](#question-3)
     -   [Question 4](#question-4)
--   [3 Please make sure your code is formatted according to the style guide.](#please-make-sure-your-code-is-formatted-according-to-the-style-guide.)
+-   [3. Please make sure your code is formatted according to the style guide.](#please-make-sure-your-code-is-formatted-according-to-the-style-guide.)
 
-### 1 Create a GitHub repository Lab11
+### 1. Create a GitHub repository Lab11
 
 <br><br>
 
-### 2 Submit your code for all problems from **Activity11**.
+### 2. Submit your code for all problems from **Activity11**.
 
 <br>
 
@@ -50,12 +50,12 @@ microbenchmark(rbinom(n = 100, size = 100, p = 0.25),
 ```
 
     ## Unit: microseconds
-    ##                                   expr     min       lq      mean  median
-    ##  rbinom(n = 100, size = 100, p = 0.25)   8.958  10.5735  13.19499  11.369
-    ##      q1(n = 100, size = 100, p = 0.25) 608.543 728.7080 936.27526 740.330
-    ##        uq       max neval
-    ##   12.6360    95.671   100
-    ##  771.9615 18414.763   100
+    ##                                   expr     min      lq      mean  median
+    ##  rbinom(n = 100, size = 100, p = 0.25)   9.012   9.864  12.04889  11.094
+    ##      q1(n = 100, size = 100, p = 0.25) 629.118 721.588 956.54732 732.653
+    ##        uq      max neval
+    ##   11.9945    60.48   100
+    ##  772.1270 19576.61   100
 
 <br>
 
@@ -146,4 +146,4 @@ ggplot(data = Y, aes(x = y1, fill = "red")) +
 
 <br><br>
 
-### 3 Please make sure your code is formatted according to the style guide.
+### 3. Please make sure your code is formatted according to the style guide.

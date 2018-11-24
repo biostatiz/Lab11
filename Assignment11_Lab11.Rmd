@@ -14,11 +14,11 @@ library(microbenchmark)
 library(ggplot2)
 ```
 
-### 1 Create a GitHub repository Lab11
+### 1. Create a GitHub repository Lab11
 
 <br><br>
 
-### 2 Submit your code for all problems from **Activity11**.
+### 2. Submit your code for all problems from **Activity11**.
 
 <br>
 
@@ -126,4 +126,4 @@ ggplot(data = Y, aes(x = y1, fill = "red")) +
 
 <br><br>
 
-### 3 Please make sure your code is formatted according to the style guide.
+### 3. Please make sure your code is formatted according to the style guide.
