@@ -30,7 +30,7 @@ Suppose we want to simulate data from a linear regression model:
 </p>
 <br>
 
-Let beta_0=15 and \beta_1=0.4 are known coefficients. Generate data (N=50) from this models with given coefficients. Fit a linear regression model and plot fitted values vs. residuals using `ggplot()` function. Please do not forget to use `set.seed()` function for reproductibility.
+Let beta_0=15 and beta_1=0.4 are known coefficients. Generate data (N=50) from this models with given coefficients. Fit a linear regression model and plot fitted values vs. residuals using `ggplot()` function. Please do not forget to use `set.seed()` function for reproductibility.
 
 <br>
 
