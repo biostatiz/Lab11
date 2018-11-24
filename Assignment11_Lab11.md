@@ -4,12 +4,12 @@ Taehoon Ha
 11/23/2018
 
 -   [1. Create a GitHub repository Lab11](#1-create-a-github-repository-lab11)
--   [2. Submit your code for all problems from **Activity11**.](#2-submit-your-code-for-all-problems-from-activity11.)
+-   [2. Submit your code for all problems from **Activity11**.](#2-submit-your-code-for-all-problems-from-activity11)
     -   [Question 1](#question-1)
     -   [Question 2](#question-2)
     -   [Question 3](#question-3)
     -   [Question 4](#question-4)
--   [3. Please make sure your code is formatted according to the style guide.](#3-please-make-sure-your-code-is-formatted-according-to-the-style-guide.)
+-   [3. Please make sure your code is formatted according to the style guide.](#3-please-make-sure-your-code-is-formatted-according-to-the-style-guide)
 
 ### 1. Create a GitHub repository Lab11
 
