@@ -11,9 +11,9 @@ Biostat1 Lab11
 <br>
 
 #### Question 1
-Write a function that generates numbers from $B(n, p)$ distribution using `runif()` function. 
+Write a function that generates numbers from *Binomial(n, p)* distribution using `runif()` function. 
 
-+ Hint: $B(n, p)$ random variable can be defined as a sum of n independent *Bernoulli(p)* random variables.
++ Hint: *Binomial(n, p)* random variable can be defined as a sum of n independent *Bernoulli(p)* random variables.
 
 <br>
 
