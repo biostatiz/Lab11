@@ -50,12 +50,12 @@ microbenchmark(rbinom(n = 100, size = 100, p = 0.25),
 ```
 
     ## Unit: microseconds
-    ##                                   expr     min      lq      mean  median
-    ##  rbinom(n = 100, size = 100, p = 0.25)   9.012   9.864  12.04889  11.094
-    ##      q1(n = 100, size = 100, p = 0.25) 629.118 721.588 956.54732 732.653
-    ##        uq      max neval
-    ##   11.9945    60.48   100
-    ##  772.1270 19576.61   100
+    ##                                   expr     min       lq      mean   median
+    ##  rbinom(n = 100, size = 100, p = 0.25)   8.995   9.8355  20.59334  11.0855
+    ##      q1(n = 100, size = 100, p = 0.25) 658.094 735.5555 980.40407 748.6125
+    ##       uq       max neval
+    ##   12.401   890.699   100
+    ##  800.322 20174.177   100
 
 <br>
 
@@ -75,11 +75,13 @@ set.seed(1)
 
 x <- runif(50, 20, 40)
 y <- 15 + 0.4 * x + rnorm(50, 0, 3)
-df <- data.frame(x, y)
-mod <- lm(y ~ x, data = df)
+data.xy <- data.frame(x, y)
+lrm <- lm(y ~ x, data = data.xy)
+data.xy$prd <- predict(lrm)
+data.xy$res <- residuals(lrm)
 
 # using ggplot function
-ggplot(mod, aes(.fitted, .resid)) + 
+ggplot(lrm, aes(.fitted, .resid)) + 
     geom_point() + 
     stat_smooth(method = "auto", se = F, col = 'red') + 
     geom_hline(yintercept = 0, linetype = "dashed") + 
@@ -93,6 +95,18 @@ ggplot(mod, aes(.fitted, .resid)) +
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 ![](Assignment11_Lab11_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
+``` r
+ggplot(data.xy, aes(x,y)) +
+    geom_smooth(method = "lm", color = 4) +
+    geom_segment(aes(xend = x, yend = prd, alpha = 0.3)) +
+    geom_point(aes(color = res)) +
+    scale_color_gradient2(low = 4, mid = 3, high = 2) +
+    geom_point(aes(y = prd), shape = 19, col = 1, lwd = 1) +
+    theme_bw()
+```
+
+![](Assignment11_Lab11_files/figure-markdown_github/unnamed-chunk-3-2.png)
 
 <br>
 
@@ -113,7 +127,7 @@ newrnorm <- function(n) {
     u2 <- runif(n/2, 0, 1)
     
     theta <- 2 * pi * u2
-    R <- sqrt(-2 * log10(u1))
+    R <- sqrt(-2 * log(u1))
     
     x <- R * cos(theta)
     y <- R * sin(theta)

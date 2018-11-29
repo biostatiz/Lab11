@@ -64,11 +64,13 @@ set.seed(1)
 
 x <- runif(50, 20, 40)
 y <- 15 + 0.4 * x + rnorm(50, 0, 3)
-df <- data.frame(x, y)
-mod <- lm(y ~ x, data = df)
+data.xy <- data.frame(x, y)
+lrm <- lm(y ~ x, data = data.xy)
+data.xy$prd <- predict(lrm)
+data.xy$res <- residuals(lrm)
 
 # using ggplot function
-ggplot(mod, aes(.fitted, .resid)) + 
+ggplot(lrm, aes(.fitted, .resid)) + 
     geom_point() + 
     stat_smooth(method = "auto", se = F, col = 'red') + 
     geom_hline(yintercept = 0, linetype = "dashed") + 
@@ -77,6 +79,14 @@ ggplot(mod, aes(.fitted, .resid)) +
     ggtitle("Residual vs Fitted Plot") +
     theme_bw() + 
     theme(plot.title = element_text(hjust = 0.5, size = 18, face = "bold"))
+
+ggplot(data.xy, aes(x,y)) +
+    geom_smooth(method = "lm", color = 4) +
+    geom_segment(aes(xend = x, yend = prd, alpha = 0.3)) +
+    geom_point(aes(color = res)) +
+    scale_color_gradient2(low = 4, mid = 3, high = 2) +
+    geom_point(aes(y = prd), shape = 19, col = 1, lwd = 1) +
+    theme_bw()
 ```
 
 <br>
@@ -98,7 +108,7 @@ newrnorm <- function(n) {
     u2 <- runif(n/2, 0, 1)
     
     theta <- 2 * pi * u2
-    R <- sqrt(-2 * log10(u1))
+    R <- sqrt(-2 * log(u1))
     
     x <- R * cos(theta)
     y <- R * sin(theta)

@@ -97,7 +97,7 @@ newrnorm <- function (n)
         vec
 }
 
-x <- seq(-2, 2, length.out = 5000)
+set.seed(1)
 y1 <- newrnorm(5000) 
 y2 <- rnorm(5000)
 Y <- data.frame(y1, y2)
